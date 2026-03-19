@@ -28,17 +28,17 @@ body.locked {
   overflow: hidden;
 }
 
-/* â”€â”€ CURSOR (desktop only) â”€â”€ */
+/* ── CURSOR (desktop only) ── */
 #cur{position:fixed;width:6px;height:6px;background:#fff;border-radius:50%;pointer-events:none;z-index:9999;left:0;top:0;transform:translate(-50%,-50%);mix-blend-mode:exclusion;}
 #cur-ring{position:fixed;width:30px;height:30px;border:1px solid rgba(255,255,255,.2);border-radius:50%;pointer-events:none;z-index:9998;left:0;top:0;transform:translate(-50%,-50%);transition:left .09s ease,top .09s ease,transform .3s ease;}
 .trail{position:fixed;width:3px;height:3px;border-radius:50%;pointer-events:none;z-index:9990;transform:translate(-50%,-50%);animation:trFade .9s ease forwards;}
 @keyframes trFade{0%{opacity:.7;}100%{opacity:0;transform:translate(-50%,-50%) scale(0);}}
 @media(hover:none){#cur,#cur-ring{display:none;}body{cursor:auto;}}
 
-/* â”€â”€ CANVAS â”€â”€ */
+/* ── CANVAS ── */
 #universe{position:fixed;inset:0;z-index:0;}
 
-/* â”€â”€ NEBULA â”€â”€ */
+/* ── NEBULA ── */
 .nebula{
   position:fixed;inset:0;z-index:1;pointer-events:none;
   background:
@@ -52,7 +52,7 @@ body.locked {
 
 #scroll-wrap{position:relative;z-index:10;}
 
-/* â•â• INTRO â•â• */
+/* ══ INTRO ══ */
 #intro{
   height:100vh;display:flex;flex-direction:column;
   align-items:center;justify-content:center;
@@ -90,7 +90,7 @@ body.locked {
   100%{opacity:1;filter:blur(0);transform:scale(1);}
 }
 
-/* â”€â”€ NAME LAYERS â”€â”€ */
+/* ── NAME LAYERS ── */
 .n-echo{
   position:absolute;
   font-family:'Great Vibes',cursive;font-weight:400;
@@ -196,7 +196,7 @@ body.locked {
 .scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,rgba(200,170,255,.8),transparent);animation:linePulse 2.2s ease-in-out infinite;}
 @keyframes linePulse{0%,100%{opacity:.4;}50%{opacity:1;transform:scaleY(1.1);}}
 
-/* â•â• POEM â•â• */
+/* ══ POEM ══ */
 #poem-section{
   min-height:100vh;display:flex;flex-direction:column;
   align-items:center;padding:100px 28px 130px;
@@ -204,7 +204,7 @@ body.locked {
 .poem-container{max-width:580px;width:100%;margin:0 auto;}
 .stanza{margin-bottom:80px;text-align:center;}
 
-/* â”€â”€ VERSE: dramatic hidden state â”€â”€ */
+/* ── VERSE: dramatic hidden state ── */
 .verse{
   display:block;font-family:'IM Fell English',serif;
   font-size:clamp(1.15rem,4.5vw,1.38rem);
@@ -223,7 +223,7 @@ body.locked {
   will-change:transform,opacity,filter;
 }
 
-/* â”€â”€ VERSE: revealed state â€” dramatic snap-in â”€â”€ */
+/* ── VERSE: revealed state — dramatic snap-in ── */
 .verse.revealed{
   color:rgba(224,216,240,.92);
   transform:translateY(0) scale(1);
@@ -241,7 +241,7 @@ body.locked {
   100%{text-shadow:0 0 0px rgba(200,170,255,0);}
 }
 
-/* â”€â”€ STANZA: flash the whole block on entry â”€â”€ */
+/* ── STANZA: flash the whole block on entry ── */
 .stanza.flash-in{
   animation:stanzaFlash .5s ease forwards;
 }
@@ -251,7 +251,7 @@ body.locked {
   100%{background:rgba(160,120,255,.0);}
 }
 
-/* â”€â”€ DIVIDERS: swipe in from sides â”€â”€ */
+/* ── DIVIDERS: swipe in from sides ── */
 .const-wrap{
   display:flex;align-items:center;gap:14px;
   margin:10px 0 52px;
@@ -277,7 +277,7 @@ body.locked {
   -webkit-tap-highlight-color:transparent;
 }
 .keyword::before{
-  content:'âœ¦ tap';
+  content:'✦ tap';
   position:absolute;top:-28px;left:50%;transform:translateX(-50%);
   font-size:.58rem;letter-spacing:.15em;font-style:normal;
   font-family:'Raleway',sans-serif;font-weight:300;
@@ -326,7 +326,7 @@ body.locked {
 .c-star{color:var(--violet);font-size:.65rem;animation:blink 2s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.2;transform:scale(.6);}}
 
-/* â”€â”€ FINAL â”€â”€ */
+/* ── FINAL ── */
 #final{
   min-height:75vh;display:flex;flex-direction:column;
   align-items:center;justify-content:center;
@@ -387,7 +387,7 @@ body.locked {
 }
 #moon-btn.revealed{opacity:1;}
 #moon-btn::before{
-  content:'tap me âœ¦';position:absolute;top:-28px;left:50%;transform:translateX(-50%);
+  content:'tap me ✦';position:absolute;top:-28px;left:50%;transform:translateX(-50%);
   font-family:'Raleway',sans-serif;font-size:.62rem;font-weight:300;letter-spacing:.2em;
   color:rgba(255,220,100,.9);white-space:nowrap;
 }
@@ -411,7 +411,7 @@ body.locked {
   50%{box-shadow:0 0 20px 4px rgba(160,120,255,.3);}
 }
 
-/* â”€â”€ PARTICLES â”€â”€ */
+/* ── PARTICLES ── */
 .particle{position:fixed;pointer-events:none;z-index:9995;animation:pFly var(--dur) var(--ease) forwards;font-size:var(--sz);}
 @keyframes pFly{
   0%{opacity:1;transform:translate(0,0) scale(1) rotate(0deg);}
@@ -420,7 +420,7 @@ body.locked {
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
 
-/* â•â• LOGIN SCREEN â•â• */
+/* ══ LOGIN SCREEN ══ */
 #login-screen{position:fixed;inset:0;z-index:99999;background:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;overflow:hidden;transition:opacity 1s ease, visibility 1s ease;}
 #pwd-input{background:rgba(100,60,200,.15);border:1px solid rgba(160,120,255,.35);color:rgba(240,235,255,.9);font-family:'Raleway',sans-serif;font-size:1rem;padding:12px 20px;border-radius:30px;outline:none;text-align:center;letter-spacing:.1em;width:250px;transition:all .3s ease;}
 #pwd-input:focus{border-color:rgba(200,170,255,.8);box-shadow:0 0 15px rgba(160,120,255,.4);background:rgba(120,80,220,.25);}
@@ -438,7 +438,7 @@ body.locked {
 
 <div id="scroll-wrap">
 
-  <!-- â•â• LOGIN â•â• -->
+  <!-- ══ LOGIN ══ -->
   <section id="login-screen">
     <p class="eyebrow" style="animation: fadeUp 1.2s ease forwards 0.2s;">protected cosmos</p>
     <div style="display:flex;flex-direction:column;align-items:center;opacity:0;animation:fadeUp 1.2s ease forwards 0.8s;position:relative;">
@@ -451,7 +451,7 @@ body.locked {
 
   <div id="main-content">
 
-  <!-- â•â• INTRO â•â• -->
+  <!-- ══ INTRO ══ -->
   <section id="intro">
     <p class="eyebrow">a moment in the cosmos</p>
 
@@ -461,12 +461,12 @@ body.locked {
       <div class="n-stroke" aria-hidden="true">Wafa</div>
       <div class="n-main">Wafa</div>
       <div class="name-rule"></div>
-      <span class="name-star" style="left:-8%;top:10%;--dur:3.2s;--delay:0s;--tx:6px;--ty:-12px">âœ¦</span>
-      <span class="name-star" style="left:105%;top:20%;--dur:2.8s;--delay:.5s;--tx:-8px;--ty:-10px">âœ¦</span>
-      <span class="name-star" style="left:0%;top:80%;--dur:3.6s;--delay:.2s;--tx:4px;--ty:8px">âœ§</span>
-      <span class="name-star" style="left:102%;top:75%;--dur:2.5s;--delay:.8s;--tx:-6px;--ty:10px">âœ§</span>
-      <span class="name-star" style="left:48%;top:-30%;--dur:4s;--delay:.3s;--tx:-4px;--ty:6px;font-size:.4rem">â‹†</span>
-      <span class="name-star" style="left:30%;top:120%;--dur:3.1s;--delay:.6s;--tx:3px;--ty:-8px;font-size:.4rem">â‹†</span>
+      <span class="name-star" style="left:-8%;top:10%;--dur:3.2s;--delay:0s;--tx:6px;--ty:-12px">✦</span>
+      <span class="name-star" style="left:105%;top:20%;--dur:2.8s;--delay:.5s;--tx:-8px;--ty:-10px">✦</span>
+      <span class="name-star" style="left:0%;top:80%;--dur:3.6s;--delay:.2s;--tx:4px;--ty:8px">✧</span>
+      <span class="name-star" style="left:102%;top:75%;--dur:2.5s;--delay:.8s;--tx:-6px;--ty:10px">✧</span>
+      <span class="name-star" style="left:48%;top:-30%;--dur:4s;--delay:.3s;--tx:-4px;--ty:6px;font-size:.4rem">⋆</span>
+      <span class="name-star" style="left:30%;top:120%;--dur:3.1s;--delay:.6s;--tx:3px;--ty:-8px;font-size:.4rem">⋆</span>
     </div>
 
     <p class="intro-sub">scroll through the stars</p>
@@ -477,30 +477,30 @@ body.locked {
     </div>
   </section>
 
-  <!-- â•â• POEM â•â• -->
+  <!-- ══ POEM ══ -->
   <section id="poem-section">
     <div class="poem-container">
 
-      <!-- Stanza 1 â€” Distance -->
+      <!-- Stanza 1 — Distance -->
       <div class="stanza">
         <span class="verse" data-delay="0">There are people the universe places</span>
-        <span class="verse" data-delay="200">on the wrong side of <span class="keyword" data-char="âœ¦ tap" data-secret="Distance has a cruel kind of irony â€” it makes you more certain of what matters, and completely powerless to reach it.">distance</span>,</span>
+        <span class="verse" data-delay="200">on the wrong side of <span class="keyword" data-char="✦ tap" data-secret="Distance has a cruel kind of irony — it makes you more certain of what matters, and completely powerless to reach it.">distance</span>,</span>
         <span class="verse" data-delay="400">close enough to feel,</span>
         <span class="verse" data-delay="600">too far to hold.</span>
-        <span class="verse" data-delay="800">And still â€” the stars know no borders.</span>
+        <span class="verse" data-delay="800">And still — the stars know no borders.</span>
       </div>
 
       <div class="const-wrap">
         <div class="c-line"></div>
-        <span class="c-star">âœ¦</span>
-        <span class="c-star" style="animation-delay:.35s">âœ¦</span>
-        <span class="c-star" style="animation-delay:.7s">âœ¦</span>
+        <span class="c-star">✦</span>
+        <span class="c-star" style="animation-delay:.35s">✦</span>
+        <span class="c-star" style="animation-delay:.7s">✦</span>
         <div class="c-line"></div>
       </div>
 
-      <!-- Stanza 2 â€” Eyes -->
+      <!-- Stanza 2 — Eyes -->
       <div class="stanza">
-        <span class="verse" data-delay="0">There are <span class="keyword" data-char="âœ¦ tap" data-secret="She bound me with no chains â€” but I am a prisoner of her eyes. I have known no captivity â€” until her gaze taught me surrender without force.">eyes</span> that carry whole universes,</span>
+        <span class="verse" data-delay="0">There are <span class="keyword" data-char="✦ tap" data-secret="She bound me with no chains — but I am a prisoner of her eyes. I have known no captivity — until her gaze taught me surrender without force.">eyes</span> that carry whole universes,</span>
         <span class="verse" data-delay="200">constellations mapped in irises,</span>
         <span class="verse" data-delay="400">the kind that hold you still</span>
         <span class="verse" data-delay="600">long after you've looked away.</span>
@@ -508,34 +508,34 @@ body.locked {
 
       <div class="const-wrap">
         <div class="c-line"></div>
-        <span class="c-star">âœ¦</span>
-        <span class="c-star" style="animation-delay:.4s">âœ¦</span>
-        <span class="c-star" style="animation-delay:.8s">âœ¦</span>
+        <span class="c-star">✦</span>
+        <span class="c-star" style="animation-delay:.4s">✦</span>
+        <span class="c-star" style="animation-delay:.8s">✦</span>
         <div class="c-line"></div>
       </div>
 
-      <!-- Stanza 3 â€” Special from day one -->
+      <!-- Stanza 3 — Special from day one -->
       <div class="stanza">
-        <span class="verse" data-delay="0">She was <span class="keyword" data-char="âœ¦ tap" data-secret="Different â€” because she wasnâ€™t new, she was familiar in a way that felt earned.Six years changes people. But when we spoke again, it didnâ€™t feel like starting over â€” it felt like resuming something that had been paused, not erased..">different</span> from the very first moment,</span>
+        <span class="verse" data-delay="0">She was <span class="keyword" data-char="✦ tap" data-secret="Different — because she wasn’t new, she was familiar in a way that felt earned.Six years changes people. But when we spoke again, it didn’t feel like starting over — it felt like resuming something that had been paused, not erased..">different</span> from the very first moment,</span>
         <span class="verse" data-delay="200">though no one could say exactly how.</span>
-        <span class="verse" data-delay="400">Some things refuse to be explained â€”</span>
+        <span class="verse" data-delay="400">Some things refuse to be explained —</span>
         <span class="verse" data-delay="600">they simply settle in the chest</span>
         <span class="verse" data-delay="800">and stay.</span>
       </div>
 
       <div class="const-wrap">
         <div class="c-line"></div>
-        <span class="c-star">âœ¦</span>
-        <span class="c-star" style="animation-delay:.25s">âœ¦</span>
-        <span class="c-star" style="animation-delay:.5s">âœ¦</span>
+        <span class="c-star">✦</span>
+        <span class="c-star" style="animation-delay:.25s">✦</span>
+        <span class="c-star" style="animation-delay:.5s">✦</span>
         <div class="c-line"></div>
       </div>
 
-      <!-- Stanza 4 â€” Subtle hint -->
+      <!-- Stanza 4 — Subtle hint -->
       <div class="stanza">
         <span class="verse" data-delay="0">I'm not saying the stars rearranged themselves.</span>
         <span class="verse" data-delay="220">I'm not saying anything, really.</span>
-        <span class="verse" data-delay="440">Only that some things are hard to <span class="keyword" data-char="âœ¦ tap" data-secret="She is different â€” a difference that only the heart can recognize. Itâ€™s in the way she moves, the energy she carries, the effortless vibe around herâ€¦ and those magical, sparkling eyes that seem to hold a world of their own.">unnotice</span>.</span>
+        <span class="verse" data-delay="440">Only that some things are hard to <span class="keyword" data-char="✦ tap" data-secret="She is different — a difference that only the heart can recognize. It’s in the way she moves, the energy she carries, the effortless vibe around her… and those magical, sparkling eyes that seem to hold a world of their own.">unnotice</span>.</span>
       </div>
 
 
@@ -543,13 +543,13 @@ body.locked {
     </div>
   </section>
 
-  <!-- â•â• FINAL â•â• -->
+  <!-- ══ FINAL ══ -->
   <section id="final">
-    <p class="final-eyebrow">and so â€”</p>
+    <p class="final-eyebrow">and so —</p>
     <p class="final-quote">
       Whatever universe arranged<br/>
       for you to exist in it<br/>
-      exactly like this â€”<br/>
+      exactly like this —<br/>
       it did well.
     </p>
     <div class="final-sig">
@@ -557,7 +557,7 @@ body.locked {
       <div class="sig-name">Zubair</div>
       <div class="sig-sub">from somewhere far, but certain</div>
     </div>
-    <button id="moon-btn">ðŸŒ™</button>
+    <button id="moon-btn">🌙</button>
   </section>
 
   </div> <!-- end main-content -->
@@ -567,7 +567,7 @@ body.locked {
 <script>
 const isMobile = ('ontouchstart' in window) || window.innerWidth < 768;
 
-/* â•â• LOGIN LOGIC â•â• */
+/* ══ LOGIN LOGIC ══ */
 const loginScreen = document.getElementById('login-screen');
 const mainContent = document.getElementById('main-content');
 const pwdInput = document.getElementById('pwd-input');
@@ -593,7 +593,7 @@ function checkPassword() {
 unlockBtn.addEventListener('click', checkPassword);
 pwdInput.addEventListener('keypress', e => { if (e.key === 'Enter') checkPassword(); });
 
-/* â•â• STARFIELD â•â• */
+/* ══ STARFIELD ══ */
 const cv=document.getElementById('universe'),ctx=cv.getContext('2d');
 let W,H,stars=[],shooters=[],stT=0;
 function resize(){W=cv.width=innerWidth;H=cv.height=innerHeight;}
@@ -630,7 +630,7 @@ function frame(){
 }
 frame();
 
-/* â•â• DESKTOP CURSOR â•â• */
+/* ══ DESKTOP CURSOR ══ */
 if(!isMobile){
   const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
   let rx=0,ry=0,cx2=0,cy2=0;
@@ -647,9 +647,9 @@ if(!isMobile){
   document.addEventListener('mouseup',()=>ring.style.transform='translate(-50%,-50%) scale(1)');
 }
 
-/* â•â• MOBILE TOUCH TRAIL â•â• */
+/* ══ MOBILE TOUCH TRAIL ══ */
 if(isMobile){
-  const trailSyms=['âœ¦','âœ§','â‹†','Â·','âˆ—'];
+  const trailSyms=['✦','✧','⋆','·','∗'];
   let lastT=0;
 
   document.addEventListener('touchmove',e=>{
@@ -658,7 +658,7 @@ if(isMobile){
     if(now-lastT<40)return; /* throttle to ~25fps max */
     lastT=now;
 
-    /* 3 particles per move â€” light enough for any phone */
+    /* 3 particles per move — light enough for any phone */
     for(let i=0;i<3;i++){
       const p=document.createElement('div');
       const sym=trailSyms[Math.floor(Math.random()*trailSyms.length)];
@@ -686,10 +686,10 @@ if(isMobile){
       setTimeout(()=>p.remove(),dur*1000+50);
     }
 
-    /* Occasional accent flash â€” smaller than before */
+    /* Occasional accent flash — smaller than before */
     if(Math.random()<0.2){
       const big=document.createElement('div');
-      big.textContent='âœ¦';
+      big.textContent='✦';
       big.style.cssText=`
         position:fixed;
         left:${t.clientX}px;top:${t.clientY}px;
@@ -720,7 +720,7 @@ if(isMobile){
   document.head.appendChild(ts);
 }
 
-/* â•â• GYROSCOPE NAME TILT (mobile) â•â• */
+/* ══ GYROSCOPE NAME TILT (mobile) ══ */
 if(isMobile && window.DeviceOrientationEvent){
   const scene = document.querySelector('.name-scene');
   let grantNeeded = typeof DeviceOrientationEvent.requestPermission === 'function';
@@ -730,7 +730,7 @@ if(isMobile && window.DeviceOrientationEvent){
     scene.style.transform=`perspective(600px) rotateY(${x*12}deg) rotateX(${-y*8}deg)`;
   }
   if(grantNeeded){
-    // iOS 13+ requires permission tap â€” attach to first touch
+    // iOS 13+ requires permission tap — attach to first touch
     document.addEventListener('touchstart',async function askPerm(){
       try{
         const res = await DeviceOrientationEvent.requestPermission();
@@ -743,7 +743,7 @@ if(isMobile && window.DeviceOrientationEvent){
   }
 }
 
-/* â•â• SCROLL REVEAL â•â• */
+/* ══ SCROLL REVEAL ══ */
 const io=new IntersectionObserver(entries=>{
   entries.forEach(en=>{
     if(!en.isIntersecting)return;
@@ -772,14 +772,14 @@ const io=new IntersectionObserver(entries=>{
     }
     io.unobserve(el);
   });
-/* Fire when even 8% of element enters viewport â€” catches fast scrollers */
+/* Fire when even 8% of element enters viewport — catches fast scrollers */
 },{threshold:0.08, rootMargin:'0px 0px -20px 0px'});
 
 document.querySelectorAll('.stanza,.const-wrap,.final-eyebrow,.final-quote,.final-sig,#moon-btn').forEach(el=>io.observe(el));
 
 /* Small ambient burst when a verse appears on mobile */
 function miniStarBurst(x,y){
-  const s=['Â·','â‹†','âœ¦','âˆ—'];
+  const s=['·','⋆','✦','∗'];
   for(let i=0;i<8;i++){
     const p=document.createElement('div');p.className='particle';
     p.textContent=s[Math.floor(Math.random()*s.length)];
@@ -789,7 +789,7 @@ function miniStarBurst(x,y){
   }
 }
 
-/* â•â• KEYWORDS â€” tap + sparkle â•â• */
+/* ══ KEYWORDS — tap + sparkle ══ */
 document.querySelectorAll('.keyword').forEach(kw=>{
   ['click','touchend'].forEach(ev=>{
     kw.addEventListener(ev,e=>{
@@ -810,7 +810,7 @@ document.querySelectorAll('.keyword').forEach(kw=>{
 });
 
 function sparkle(x,y){
-  const s=['âœ¦','âœ§','â‹†','Â·','â—¦','âˆ—','â˜…'];
+  const s=['✦','✧','⋆','·','◦','∗','★'];
   for(let i=0;i<28;i++){
     const p=document.createElement('div');p.className='particle';
     p.textContent=s[Math.floor(Math.random()*s.length)];
@@ -839,15 +839,15 @@ const rStyle=document.createElement('style');
 rStyle.textContent='@keyframes rippleOut{0%{transform:translate(-50%,-50%) scale(1);opacity:1;}100%{transform:translate(-50%,-50%) scale(8);opacity:0;}}';
 document.head.appendChild(rStyle);
 
-/* â•â• MOON BUTTON â•â• */
+/* ══ MOON BUTTON ══ */
 document.getElementById('moon-btn').addEventListener('click',e=>{
   const btn=e.currentTarget,r=btn.getBoundingClientRect();
   const cx3=r.left+r.width/2,cy3=r.top+r.height/2;
-  const w=['Wafa','âœ¦','Zubair','â­','ðŸ’«','ðŸŒ™','â‹†','âœ¦','Â·','âˆ—','ðŸŒŸ','from far'];
+  const w=['Wafa','✦','Zubair','⭐','💫','🌙','⋆','✦','·','∗','🌟','from far'];
   const cols=['#d4a85a','#f0d080','#c090c8','#80c0d8','#f5d980','#b890e0'];
   for(let i=0;i<42;i++){
     const p=document.createElement('div');p.className='particle';
-    p.textContent=i<w.length?w[i]:['âœ¦','â‹†','Â·','âœ§','âˆ—'][Math.floor(Math.random()*5)];
+    p.textContent=i<w.length?w[i]:['✦','⋆','·','✧','∗'][Math.floor(Math.random()*5)];
     const a=Math.random()*Math.PI*2,d=60+Math.random()*260;
     p.style.cssText=`left:${cx3}px;top:${cy3}px;--tx:${Math.cos(a)*d}px;--ty:${Math.sin(a)*d}px;--dur:${.9+Math.random()*1.3}s;--ease:cubic-bezier(.1,.8,.3,1);--sz:${i<w.length?'1rem':(.7+Math.random()*.9)+'rem'};--rot:${(Math.random()-.5)*540}deg;color:${cols[Math.floor(Math.random()*cols.length)]};font-family:'IM Fell English',serif;font-style:italic;`;
     document.body.appendChild(p);setTimeout(()=>p.remove(),1600);
