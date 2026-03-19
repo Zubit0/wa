@@ -24,6 +24,10 @@ body{
   overflow-x:hidden;
 }
 
+body.locked {
+  overflow: hidden;
+}
+
 /* â”€â”€ CURSOR (desktop only) â”€â”€ */
 #cur{position:fixed;width:6px;height:6px;background:#fff;border-radius:50%;pointer-events:none;z-index:9999;left:0;top:0;transform:translate(-50%,-50%);mix-blend-mode:exclusion;}
 #cur-ring{position:fixed;width:30px;height:30px;border:1px solid rgba(255,255,255,.2);border-radius:50%;pointer-events:none;z-index:9998;left:0;top:0;transform:translate(-50%,-50%);transition:left .09s ease,top .09s ease,transform .3s ease;}
@@ -417,7 +421,7 @@ body{
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
 
 /* â•â• LOGIN SCREEN â•â• */
-#login-screen{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;position:relative;overflow:hidden;transition:opacity 1s ease;}
+#login-screen{position:fixed;inset:0;z-index:99999;background:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;overflow:hidden;transition:opacity 1s ease, visibility 1s ease;}
 #pwd-input{background:rgba(100,60,200,.15);border:1px solid rgba(160,120,255,.35);color:rgba(240,235,255,.9);font-family:'Raleway',sans-serif;font-size:1rem;padding:12px 20px;border-radius:30px;outline:none;text-align:center;letter-spacing:.1em;width:250px;transition:all .3s ease;}
 #pwd-input:focus{border-color:rgba(200,170,255,.8);box-shadow:0 0 15px rgba(160,120,255,.4);background:rgba(120,80,220,.25);}
 #unlock-btn{background:rgba(140,100,255,.2);border:1px solid rgba(180,150,255,.5);color:#fff;font-family:'Raleway',sans-serif;font-weight:300;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;padding:10px 24px;border-radius:30px;cursor:pointer;transition:all .3s ease;-webkit-tap-highlight-color:transparent;margin-top:15px;}
@@ -425,7 +429,7 @@ body{
 #login-error{color:rgba(220,100,120,.9);font-family:'Raleway',sans-serif;font-size:.75rem;font-weight:300;letter-spacing:.1em;opacity:0;transition:opacity .3s ease;margin-top:10px;position:absolute;bottom:-30px;width:100%;}
 </style>
 </head>
-<body>
+<body class="locked">
 
 <div id="cur"></div>
 <div id="cur-ring"></div>
@@ -445,7 +449,7 @@ body{
     </div>
   </section>
 
-  <div id="main-content" style="display: none;">
+  <div id="main-content">
 
   <!-- â•â• INTRO â•â• -->
   <section id="intro">
@@ -574,9 +578,10 @@ function checkPassword() {
   const pwd = pwdInput.value.toLowerCase().trim();
   if (btoa(pwd) === 'ODA2MDIy') {
     loginScreen.style.opacity = '0';
+    loginScreen.style.visibility = 'hidden';
+    document.body.classList.remove('locked');
     setTimeout(() => {
       loginScreen.style.display = 'none';
-      mainContent.style.display = 'block';
       window.scrollTo(0, 0);
     }, 1000);
   } else {
